@@ -1,23 +1,13 @@
-import React,{useState} from "react";
+import React from 'react';
 
 
 
-const Display = (props) => {
-const [input,setInput] = useState('')
- 
-handleChange= (event)=>{
-  setInput([event.target.name]:event.target.name)
-}
-
-
-
-  return<div><input  onChange={handleChange} value={input}/></div>
-
-
-  return <div></div>;
+const Display = ({ total }) => {
+	return (
+		<div >
+			<span>{total}</span>
+		</div>
+	);
 };
 
-
-
-
-export default Display
+export default Display;

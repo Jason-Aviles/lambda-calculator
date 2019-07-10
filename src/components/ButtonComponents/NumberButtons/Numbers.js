@@ -3,20 +3,20 @@ import NumBtn from './NumberButton'
 //import any components needed
 
 //Import your array data to from the provided data file
-import {numbers} from '../../../data'
-const Numbers = () => {
-  // STEP 2 - add the imported data to state
 
-const [number ,setNumbers ]= useState(numbers)
+const Numbers = (props) => {
+  // STEP 2 - add the imported data to state
+console.log('nnumbers.js',props)
+
 
 
   return (
 
 
 
-    <div style={{width:'9%'}}>
+    <div>
       {
-        number.map((item,i) => <NumBtn key={i}  numbers={item}/>)
+          props.number.map((item,i) => <NumBtn key={i}  numbers={item}  setTotal={props.setTotal}/>)
         
         
         /* STEP 3 - Use .map() to iterate over your array data and return a button

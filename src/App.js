@@ -16,18 +16,16 @@ function App() {
 
 const [ num ,setNum] = useState(numbers)
 
-  // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
-  // Once the state hooks are in place write some functions to hold data in state and update that data depending on what it needs to be doing
-  // Your functions should accept a parameter of the the item data being displayed to the DOM (ie - should recieve 5 if the user clicks on
-  // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
-  // Don't forget to pass the functions (and any additional data needed) to the components as props
+const [ total, setTotal ] = useState(0)
 
+
+console.log(total)
   return (
-    <div className="container">
-      <Logo /><Display number={num}/>
-      <div className="App">
-      <Numbers/>
-<Operator/>
+    <div className="container" style={{display:'flex',justifyContent:'center',flexDirection:"column",background:'red',width:'100%'}}>
+      <Logo /><Display total={total}/>
+      <div className="App" style={{width:'20%',display:'flex',justifyContent:'center',flexDirection:"row"}}>
+      <Numbers number={num}   setTotal={setTotal} />
+<Operator  />
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
       </div>
     </div>
